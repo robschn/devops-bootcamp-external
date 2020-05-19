@@ -1,0 +1,12 @@
+
+# Create GKE Cluster
+gcloud container clusters create events-cluster --project=mindful-primer-272612 --zone=us-central1-c --preemptible --num-nodes=2
+
+# Connect to Cluster
+gcloud container clusters get-credentials events-cluster --zone us-central1-c --project mindful-primer-272612
+
+# Deploy the backend
+kubectl apply -f kube-config-backend.yaml
+
+# Deploy the frontend
+kubectl apply -f kube-config-frontend.yaml
