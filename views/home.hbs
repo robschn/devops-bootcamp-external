@@ -1,8 +1,13 @@
 <ul >
   {{#events}}
-    <li>
-        <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
-    </li>
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+        <div class="col-md-4">
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
+        </div>
+        </div>
+    </div>
   {{/events}}
 </ul>
