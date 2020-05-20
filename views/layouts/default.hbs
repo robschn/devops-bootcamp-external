@@ -39,19 +39,28 @@
 </nav>
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Cloudtastic Company Annoucements</h1>
+      <br><h1 class="display-3">Cloudtastic Annoucements</h1>
       <p>Please read this week's announcements. If you have a new annoucement, please use the form below to add it.</p>
     </div>
   </div>
 {{{body}}}
-<div>
-  <h2>Add an event</h2>
-    <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
-       <br />
-        <input type="submit" name="submit" value="submit" />
-    </form>
+<br>
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Add an event</h2>
+                <form action="/event" method="post">
+                    Title: <br><input name="title" type="text" /> <br />
+                    Time: <br><input name="title" type="time" /> <br />
+                    Description: <br><input name="description" type="text" /> <br />
+                <br />
+                <input type="submit" name="submit" value="submit" />
+                 </form>
+        </div>
+    </div>
+</div>
+
   </div>
 </body>
 </html>
