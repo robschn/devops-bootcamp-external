@@ -18,7 +18,7 @@ spec:
       containers:
       - name: events-web
         image: gcr.io/dtc-user112/external-image:latest
-        imagePullPolicy: "Always"
+        imagePullPolicy: Always
         env:
         - name: PORT
           value: "80"
