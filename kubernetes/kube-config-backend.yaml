@@ -18,6 +18,7 @@ spec:
       containers:
       - name: events-data
         image: gcr.io/dtc-user112/internal-image:latest
+        imagePullPolicy: "Always"
         env:
         - name: PORT
           value: "8080"
