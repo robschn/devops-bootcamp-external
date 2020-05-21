@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: events-data
-        image: gcr.io/dtc-user112/internal-image:latest
+        image: gcr.io/dtc-user112/internal-image:v1.0.14
         env:
         - name: PORT
           value: "8080"
