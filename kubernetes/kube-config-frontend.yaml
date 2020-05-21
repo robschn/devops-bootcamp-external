@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: events-web
-        image: gcr.io/dtc-user112/external-image:v1.0.3
+        image: gcr.io/dtc-user111/external-image:v1.0.0
         env:
         - name: PORT
           value: "80"

@@ -1,0 +1,23 @@
+ 
+# Google Cloud build
+#gcloud builds submit --tag=gcr.io/mindful-primer-272612/events-sample-external:v1.0.0 .
+
+    docker build . -t external:v1.0.1
+    docker build . -t internal:v1.0.1
+# To run internal, from the internal folder:
+    docker run -p 8082:8082 internal:v1.0.1
+# To run external, from the external folder
+    docker run -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" external:v1.0.1
+# Other commands to try:
+    docker images
+    docker ps -a
+    docker stop <ContainerID>
+    docker rm <ContainerID>  
+In Cloud Shell
+# From external folder:
+    export PROJECT=$(gcloud info --format='value(config.project)')
+    gcloud builds submit --tag gcr.io/$PROJECT/external-image:v1.0.1 .
+# Type Y if asked to enable API
+# From internal folder:
+    export PROJECT=$(gcloud info --format='value(config.project)')
+    gcloud builds submit --tag gcr.io/$PROJECT/internal-image:v1.0.1 .
